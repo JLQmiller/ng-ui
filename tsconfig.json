@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "mui": [
+        "dist/mui",
+      ],
+      "mui/*": [
+        "dist/mui/*"
+      ]
+    }
   }
 }

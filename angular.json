@@ -134,6 +134,41 @@
           }
         }
       }
+    },
+    "mui": {
+      "root": "projects/mui",
+      "sourceRoot": "projects/mui/src",
+      "projectType": "library",
+      "prefix": "mui",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/mui/tsconfig.lib.json",
+            "project": "projects/mui/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mui/src/test.ts",
+            "tsConfig": "projects/mui/tsconfig.spec.json",
+            "karmaConfig": "projects/mui/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mui/tsconfig.lib.json",
+              "projects/mui/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ui"
